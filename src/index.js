@@ -1,5 +1,17 @@
 import store from './store.js';
 import { addToCart, updateCart, deleteFromCart }  from './actions/cart-actions';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+
+const App = <h1>Redux Shopping Cart</h1>;
+
+ReactDOM.render(
+  <Provider store={store}>
+    { App }
+  </Provider> ,
+  document.getElementById('root')
+);
 
 // console.log("initial state: ", store.getState());
 //
